@@ -1,1 +1,467 @@
-*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:Poppins,sans-serif;background:#07111f;color:#fff}header{position:sticky;top:0;background:rgba(7,17,31,.85);backdrop-filter:blur(12px)}.container{width:min(1180px,92%);margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.logo{font-size:34px;font-weight:700}.logo span{color:#38bdf8}nav a{color:#fff;text-decoration:none;margin-left:24px}.hero{padding:100px 0;background:radial-gradient(circle at top,#1d4ed8,#07111f 60%)}.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center}.badge{display:inline-block;padding:8px 14px;background:#17335f;border-radius:30px;color:#7dd3fc}.hero h1{font-size:64px;line-height:1.1;margin:18px 0}.hero p{color:#cbd5e1;font-size:20px}.btn{display:inline-block;background:#2563eb;color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;border:none;cursor:pointer}.outline{background:transparent;border:2px solid #38bdf8}.actions{margin:28px 0}.glass,.card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(10px);padding:24px;border-radius:18px;transition:.3s}.card:hover,.glass:hover{transform:translateY(-6px)}section{padding:80px 0}h2{font-size:40px;margin-bottom:24px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}.stats{display:flex;gap:30px;margin-top:30px}.stats div{display:flex;flex-direction:column}strong{font-size:30px;color:#38bdf8}form{display:grid;gap:14px;max-width:600px}input,textarea{padding:14px;border-radius:10px;border:none}textarea{min-height:120px}footer{text-align:center;padding:30px;background:#09182d;color:#94a3b8}@media(max-width:800px){.hero-grid{grid-template-columns:1fr}.hero h1{font-size:44px}.nav{flex-direction:column;gap:12px}}
+/* ===========================
+   TrustNest AI Premium Theme
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#07111f;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+/* ===========================
+NAVBAR
+=========================== */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(5,15,30,.95);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    z-index:999;
+}
+
+.nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:85px;
+}
+
+.logo{
+    font-size:38px;
+    font-weight:800;
+}
+
+.logo span{
+    color:#31b6ff;
+}
+
+.nav ul{
+    display:flex;
+    gap:45px;
+    list-style:none;
+}
+
+.nav a{
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    transition:.3s;
+}
+
+.nav a:hover{
+    color:#31b6ff;
+}
+
+.nav-btn{
+    padding:14px 30px;
+    background:#2563eb;
+    border-radius:10px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-btn:hover{
+    background:#1d4ed8;
+}
+
+/* ===========================
+HERO
+=========================== */
+
+.hero{
+    padding-top:140px;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:
+    radial-gradient(circle at top,#2446b6 0%,transparent 45%),
+    #07111f;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 470px;
+    gap:70px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    background:#143663;
+    color:white;
+    padding:12px 26px;
+    border-radius:100px;
+    margin-bottom:35px;
+    font-size:16px;
+}
+
+.hero h1{
+    font-size:76px;
+    line-height:1.05;
+    font-weight:800;
+}
+
+.hero p{
+    margin-top:30px;
+    font-size:24px;
+    line-height:1.7;
+    color:#cfd8e6;
+}
+
+.hero-buttons{
+    margin-top:45px;
+    display:flex;
+    gap:20px;
+}
+
+.primary-btn,
+.secondary-btn{
+    text-decoration:none;
+    font-weight:600;
+    border-radius:12px;
+    padding:18px 36px;
+    transition:.3s;
+}
+
+.primary-btn{
+    background:#2563eb;
+    color:white;
+}
+
+.primary-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 30px rgba(37,99,235,.35);
+}
+
+.secondary-btn{
+    border:2px solid #31b6ff;
+    color:white;
+}
+
+.secondary-btn:hover{
+    background:#31b6ff;
+}
+
+.hero-stats{
+    margin-top:60px;
+    display:flex;
+    gap:55px;
+}
+
+.hero-stats h2{
+    color:#31b6ff;
+    font-size:40px;
+}
+
+.hero-stats span{
+    color:#bfc7d8;
+}
+
+/* ===========================
+Dashboard Card
+=========================== */
+
+.dashboard-card{
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:28px;
+    padding:40px;
+    box-shadow:0 30px 80px rgba(0,0,0,.45);
+}
+
+.dashboard-top{
+    display:flex;
+    gap:10px;
+    margin-bottom:35px;
+}
+
+.dot{
+    width:13px;
+    height:13px;
+    border-radius:50%;
+}
+
+.red{background:#ff5f57;}
+.yellow{background:#ffbd2e;}
+.green{background:#28c840;}
+
+.dashboard-card h2{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.dashboard-card p{
+    color:#d4d9e6;
+    line-height:1.7;
+}
+
+.security-score{
+    margin-top:35px;
+}
+
+.security-score span{
+    color:#9cb2d2;
+}
+
+.security-score h1{
+    margin-top:12px;
+    font-size:68px;
+    color:#31b6ff;
+}
+
+.progress{
+    width:100%;
+    height:12px;
+    background:#1b2742;
+    border-radius:20px;
+    margin-top:25px;
+}
+
+.progress-fill{
+    width:98%;
+    height:100%;
+    background:linear-gradient(90deg,#31b6ff,#2563eb);
+    border-radius:20px;
+}
+
+.status{
+    display:flex;
+    justify-content:space-between;
+    margin-top:35px;
+}
+
+.status strong{
+    display:block;
+    margin-top:10px;
+    color:#31b6ff;
+}
+
+/* ===========================
+Sections
+=========================== */
+
+section{
+    padding:110px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.section-title h2{
+    font-size:48px;
+}
+
+.section-title p{
+    color:#aab6ca;
+    margin-top:15px;
+}
+
+/* ===========================
+Trusted
+=========================== */
+
+.trusted{
+    background:#081423;
+}
+
+.trusted h3{
+    text-align:center;
+    margin-bottom:45px;
+    color:#c8d3e6;
+}
+
+.companies{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:60px;
+}
+
+.companies span{
+    color:#7fa7ff;
+    font-size:24px;
+    font-weight:600;
+}
+
+/* ===========================
+Cards
+=========================== */
+
+.cards,
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:35px;
+}
+
+.card,
+.feature{
+    background:#0d1930;
+    padding:35px;
+    border-radius:22px;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.35s;
+}
+
+.card:hover,
+.feature:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(37,99,235,.22);
+}
+
+.card h3,
+.feature h3{
+    color:#31b6ff;
+    margin-bottom:18px;
+    font-size:28px;
+}
+
+.card p,
+.feature p{
+    color:#cbd4e4;
+    line-height:1.8;
+}
+
+/* ===========================
+About
+=========================== */
+
+.about{
+    text-align:center;
+}
+
+.about h2{
+    font-size:48px;
+    margin-bottom:30px;
+}
+
+.about p{
+    max-width:900px;
+    margin:auto;
+    color:#cbd4e4;
+    line-height:2;
+    font-size:20px;
+}
+
+/* ===========================
+Contact
+=========================== */
+
+.contact{
+    text-align:center;
+}
+
+.contact h2{
+    font-size:48px;
+}
+
+.contact p{
+    margin-top:18px;
+    color:#cbd4e4;
+}
+
+.contact .primary-btn{
+    display:inline-block;
+    margin-top:35px;
+}
+
+/* ===========================
+Footer
+=========================== */
+
+footer{
+    background:#050d18;
+    border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footer{
+    text-align:center;
+    padding:40px 0;
+    color:#91a5c5;
+}
+
+/* ===========================
+Responsive
+=========================== */
+
+@media(max-width:1100px){
+
+.hero-grid{
+grid-template-columns:1fr;
+}
+
+.cards,
+.feature-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:55px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.dashboard-card{
+margin-top:50px;
+}
+
+.nav ul{
+display:none;
+}
+
+.hero-stats{
+flex-wrap:wrap;
+}
+
+}
+
+@media(max-width:700px){
+
+.logo{
+font-size:30px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.hero-stats{
+gap:25px;
+}
+
+.section-title h2{
+font-size:36px;
+}
+
+.about h2,
+.contact h2{
+font-size:36px;
+}
+
+}
